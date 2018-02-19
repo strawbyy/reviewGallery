@@ -62,6 +62,7 @@ void calculatorFunction(){
             break;
         default:
             std::cout << "Invalid mathematical operation. Please try again \n";
+            // Here, I used recursion to bounce back up and redo the program since it failed.
             calculatorFunction();
     }
 

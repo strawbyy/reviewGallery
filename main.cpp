@@ -21,6 +21,7 @@ int numTest(int num1, int num2);
 int numTest();
 void nTestFunction();
 int calculatorFunction();
+void countdownLoop();
 
 int main(){
 
@@ -38,7 +39,7 @@ int main(){
     
     int tutorialNum;
     std::cout << "Let's begin by reviewing concepts. Choose one of the following options or enter -1 to exit.\n";
-    std::cout << "1:Function overloading\n2:Basic Calculator.\n";
+    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n";
     std::cin >> tutorialNum;
     std::cout << "\n";
     while(tutorialNum!=-1){
@@ -48,6 +49,9 @@ int main(){
                 break;
             case 2:
                 calculatorFunction();
+                break;
+            case 3:
+                countdownLoop();
                 break;
             default:
                 exit(0);
