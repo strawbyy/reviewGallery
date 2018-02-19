@@ -1,6 +1,54 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+int numTest(int num1, int num2);
+int numTest();
+void nTestFunction();
+int calculatorFunction();
+void countdownLoop();
+void countUpLoop();
+void arrayTut();
+
+
+int tutorialChoice(){
+    int tutorialNum;
+    int* tutorialNumPtr = &tutorialNum;
+    std::cout << "Choose one of the following options or enter -1 to exit.\n";
+    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4: Even/Odd list.\n5:What are arrays?\n";
+    std::cin >> tutorialNum;
+    std::cout << "\n";
+    while(tutorialNum!=-1){
+        switch(tutorialNum){
+            case 1:
+                nTestFunction();
+                std::cout << "\n\n";
+                tutorialChoice();
+                break;
+            case 2:
+                calculatorFunction();
+                std::cout << "\n\n";
+                tutorialChoice();
+                break;
+            case 3:
+                countdownLoop();
+                std::cout << "\n\n";
+                tutorialChoice();
+                break;
+            case 4:
+                countUpLoop();
+                std::cout << "\n\n";
+                tutorialChoice();
+                break;
+           case 5:
+                arrayTut();
+                std::cout << "\n\n";
+                tutorialChoice();
+                break;
+            default:
+                tutorialChoice();
+        }
+    }
+}
 
 void countdownLoop(){
     int counts;
@@ -22,12 +70,12 @@ void countUpLoop(){
     int i;
     int increment;
     int x;
-    std::cout << "Enter which number you want to come from: \n";
+    std::cout << "Enter which number do you want to count from: \n";
     std::cin >> i;
     if(std::cin.fail()){
         exit(0);
     }
-    std::cout << "Enter which number you want to come to: \n";
+    std::cout << "Enter which number do you want to count to: \n";
     std::cin >> x;
     if(std::cin.fail()){
         exit(0);

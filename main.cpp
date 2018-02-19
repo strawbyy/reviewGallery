@@ -24,6 +24,7 @@ int calculatorFunction();
 void countdownLoop();
 void countUpLoop();
 void arrayTut();
+int tutorialChoice();
 
 int main(){
 
@@ -35,43 +36,16 @@ int main(){
     std::cin >> confirmation;
     if(confirmation=="y"){
         std::cout << "Excellent! Let's carry on. \n\n";
+        tutorialChoice();
     }else{
         exit(0);
     }
-    
-    int tutorialNum;
-    std::cout << "Let's begin by reviewing concepts. Choose one of the following options or enter -1 to exit.\n";
-    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4: Even/Odd list.\n5:What are arrays?\n";
-    std::cin >> tutorialNum;
-    std::cout << "\n";
-    while(tutorialNum!=-1){
-        switch(tutorialNum){
-            case 1:
-                nTestFunction();
-                exit(0);
-                break;
-            case 2:
-                calculatorFunction();
-                exit(0);
-                break;
-            case 3:
-                countdownLoop();
-                exit(0);
-                break;
-            case 4:
-                countUpLoop();
-                exit(0);
-                break;
-           case 5:
-                arrayTut();
-                exit(0);
-                break;
-            default:
-                exit(0);
-        }
-    }    
     return 0;
 }
+
+
+    
+
 
 
 
