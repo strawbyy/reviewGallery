@@ -10,14 +10,14 @@ void countUpLoop();
 void arrayTut();
 
 
-int tutorialChoice(){
+void tutorialChoice(){
     int tutorialNum;
     int* tutorialNumPtr = &tutorialNum;
     std::cout << "Choose one of the following options or enter -1 to exit.\n";
-    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4: Even/Odd list.\n5:What are arrays?\n";
+    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n";
     std::cin >> tutorialNum;
     std::cout << "\n";
-    while(tutorialNum!=-1){
+    do {
         switch(tutorialNum){
             case 1:
                 nTestFunction();
@@ -39,15 +39,20 @@ int tutorialChoice(){
                 std::cout << "\n\n";
                 tutorialChoice();
                 break;
-           case 5:
+            case 5:
                 arrayTut();
                 std::cout << "\n\n";
                 tutorialChoice();
                 break;
             default:
+                if(tutorialNum!=-1){
                 tutorialChoice();
+                }else{
+                    exit(0);
+                }
         }
-    }
+    }while(tutorialNum!=-1);
+    exit(0);
 }
 
 void countdownLoop(){
@@ -101,4 +106,18 @@ void arrayTut(){
         std::cout << randomNumArray[i] << ", ";
     }
     std::cout << randomNumArray[4] << ".\n";
+    std::cout << "To change them, you will be presented with a series of inputs. \nThe next 5 numbers you input will be the new values: ";
+    for (int i=0; i<5; i++){
+        std::cin >> randomNumArray[i];
+        if(randomNumArray[i]==-1){
+            exit(0);
+        }
+    }
+    std::cout << "The new array numbers are: ";
+    for(int i=0; i<4; i++){
+        std::cout << randomNumArray[i] << ", ";
+    }
+    std::cout << randomNumArray[4] << ".\n";
+
+    
 }

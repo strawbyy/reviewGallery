@@ -24,7 +24,7 @@ int calculatorFunction();
 void countdownLoop();
 void countUpLoop();
 void arrayTut();
-int tutorialChoice();
+void tutorialChoice();
 
 int main(){
 
