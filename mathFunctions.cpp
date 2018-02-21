@@ -24,8 +24,8 @@ void nTestFunction(){
 
 void calculatorFunction(){
     calculatorC calcO;
-    int num1;
-    int num2;
+    float num1;
+    float num2;
     std::cout << "Input letters at any time to quit. \n\n";
     int mathOperation;
     std::cout << "Enter your first number. \n";
@@ -67,10 +67,11 @@ void calculatorFunction(){
     calcO.printResult();
 }
 
-void calculatorFunction(int calculationResult){
+// This function overload is used to to keep the calculation continuous by taking the result and using it as num1 instead. 
+void calculatorFunction(float calculationResult){
     calculatorC calcO;
-    int num1 = calculationResult;
-    int num2;
+    float num1 = calculationResult;
+    float num2;
     std::cout << "Input letters at any time to quit. \n\n";
     int mathOperation;
     std::cout << "Enter your operation (1 for addition , 2 for subtraction , 3 for division , 4 for multiplication or 5 to find remainder.) \n";
@@ -102,7 +103,7 @@ void calculatorFunction(int calculationResult){
         default:
             std::cout << "Invalid mathematical operation. Please try again \n";
             // Here, I used recursion to bounce back up and redo the program since it failed.
-            calculatorFunction();
+            calculatorFunction(num1);
     }
     calcO.printResult();
 

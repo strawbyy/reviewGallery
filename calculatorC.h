@@ -4,16 +4,16 @@
 class calculatorC{
     public:
         calculatorC();
-        int addNumbers(int firstNum, int secondNum);
-        int subtractNumbers(int firstNum, int secondNum);
-        int multiplyNumbers(int firstNum, int secondNum);
-        int divideNumbers(int firstNum, int secondNum);
+        int addNumbers(float firstNum, float secondNum);
+        int subtractNumbers(float firstNum, float secondNum);
+        int multiplyNumbers(float firstNum, float secondNum);
+        int divideNumbers(float firstNum, float secondNum);
         int findRemainder(int firstNum, int secondNum);
         void printResult();
         void nextCalculation();
         ~calculatorC();
     private:
-        int result;    
+        float result;    
 };
 
 
