@@ -43,7 +43,6 @@ void calculatorFunction(){
     if(std::cin.fail()){
         exit(0);
     }
-
     switch(mathOperation){
         case 1:
             calcO.addNumbers(num1,num2);
@@ -65,7 +64,46 @@ void calculatorFunction(){
             // Here, I used recursion to bounce back up and redo the program since it failed.
             calculatorFunction();
     }
+    calcO.printResult();
+}
 
+void calculatorFunction(int calculationResult){
+    calculatorC calcO;
+    int num1 = calculationResult;
+    int num2;
+    std::cout << "Input letters at any time to quit. \n\n";
+    int mathOperation;
+    std::cout << "Enter your operation (1 for addition , 2 for subtraction , 3 for division , 4 for multiplication or 5 to find remainder.) \n";
+    std::cin >> mathOperation;
+    if(std::cin.fail()){
+        exit(0);
+    }
+    std::cout << "Enter the second/final number.\n";
+    std::cin >> num2;
+    if(std::cin.fail()){
+        exit(0);
+    }
+    switch(mathOperation){
+        case 1:
+            calcO.addNumbers(num1,num2);
+            break;
+        case 2:
+            calcO.subtractNumbers(num1,num2);
+            break;
+        case 3:
+            calcO.divideNumbers(num1,num2);
+            break;
+        case 4:
+            calcO.multiplyNumbers(num1,num2);
+            break;
+        case 5:
+            calcO.findRemainder(num1,num2);
+            break;
+        default:
+            std::cout << "Invalid mathematical operation. Please try again \n";
+            // Here, I used recursion to bounce back up and redo the program since it failed.
+            calculatorFunction();
+    }
     calcO.printResult();
 
 }

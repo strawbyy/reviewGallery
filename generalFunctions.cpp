@@ -8,13 +8,13 @@ int calculatorFunction();
 void countdownLoop();
 void countUpLoop();
 void arrayTut();
+void pointersTut();
 
 
 void tutorialChoice(){
     int tutorialNum;
-    int* tutorialNumPtr = &tutorialNum;
     std::cout << "Choose one of the following options or enter -1 to exit.\n";
-    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n";
+    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n6:Pointers and refrences:\n";
     std::cin >> tutorialNum;
     std::cout << "\n";
     do {
@@ -44,6 +44,10 @@ void tutorialChoice(){
                 std::cout << "\n\n";
                 tutorialChoice();
                 break;
+            case 6:
+                pointersTut();
+                std::cout << "\n\n";
+                tutorialChoice();
             default:
                 if(tutorialNum!=-1){
                 tutorialChoice();
@@ -119,5 +123,32 @@ void arrayTut(){
     }
     std::cout << randomNumArray[4] << ".\n";
 
+    std::string nameArray[2][3] = {{"Michael","shaheen","andrew"},{"Fox","strawby","lenny"}};
     
+    std::cout << "Here is a multidimentional array: \n";
+
+    for(int i = 0; i<3; i++){
+        std::cout << nameArray[0][i] << " ";
+        std::cout << nameArray[1][i] << " ";
+        std::cout << std::endl;
+    }    
+}
+
+void pointersTut(){
+    int aNumber = 5;
+    int bNumber = 10;
+    int* aPointer = &aNumber;
+    int& bRefrence = bNumber;
+
+    std::cout << "Here's a pointer: " << aPointer << " and here's a refrence: " << bRefrence << "\n\nThe difference is, the pointer holds a memory address while a refrence is just\nthat,"
+                 "a refrence to a variable. Adding numbers to a pointer does not change the\nvalue of the number, instead it shits its memory location. While adding to a\nrefrence does change the value"
+                 "\nAn example of this is the following. 2 will be added to both the refrence and the pointer.\nOriginal value of the aNumber is 5, while bNumber is 10. Pointer points to a, refrence to b.\n\n";
+    
+    aPointer+=2;
+    bRefrence+=2;
+
+    std::cout << "Here's the pointer: " << aPointer << " and here's the refrence: " << bRefrence << "\nYou can see that in this case, int values hold 4 bytes of memory.\n";
+
+    
+
 }
