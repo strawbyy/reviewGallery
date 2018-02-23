@@ -15,6 +15,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+#include <cctype>
 
 //Prototype those functions!
 int numTest(int num1, int num2);
@@ -34,7 +35,10 @@ int main(){
     std::cout << "Would you like to learn about the c++ language? (Y/N)\n";
     std::string confirmation;
     std::cin >> confirmation;
-    if(confirmation=="y"){
+    for (std::string::iterator i = confirmation.begin(); i < confirmation.end(); i++){
+        *i = tolower(*i);
+    }
+    if(confirmation=="y" || confirmation=="yes"){
         std::cout << "Excellent! Let's carry on. \n\n";
         tutorialChoice();
     }else{

@@ -9,6 +9,7 @@ void countdownLoop();
 void countUpLoop();
 void arrayTut();
 void pointersTut();
+int main();
 
 
 void tutorialChoice(){
@@ -103,7 +104,7 @@ void countUpLoop(){
 }
 
 void arrayTut(){
-    std::srand(time(0));
+    std::srand(23423);
     int randomNumArray[5] = {(std::rand()%6),((std::rand()%6)*2),((std::rand()%6)*(std::rand()%13)),(std::rand()%100),((std::rand()%20)*3)};
     std::cout << "Here are all the random numbers from an array: "; 
     for(int i=0; i<4; i++){
@@ -112,9 +113,25 @@ void arrayTut(){
     std::cout << randomNumArray[4] << ".\n";
     std::cout << "To change them, you will be presented with a series of inputs. \nThe next 5 numbers you input will be the new values: ";
     for (int i=0; i<5; i++){
-        std::cin >> randomNumArray[i];
-        if(randomNumArray[i]==-1){
+        try {
+            std::cin >> randomNumArray[i];
+            if(std::cin.fail()){
+                for (int i=0; i<5; i++){
+                randomNumArray[i] = 0;
+                }
+                throw 1;
+            }
+            if(randomNumArray[i]==-1){
+                exit(0);
+            }
+        }
+        catch(int e){
+            std::cout << "\nError " << e << ", please enter a valid integer\n";
+            for (int i=0; i<5; i++){
+                randomNumArray[i] = 1;
+            }
             exit(0);
+            
         }
     }
     std::cout << "The new array numbers are: ";
@@ -147,8 +164,6 @@ void pointersTut(){
     aPointer+=2;
     bRefrence+=2;
 
-    std::cout << "Here's the pointer: " << aPointer << " and here's the refrence: " << bRefrence << "\nYou can see that in this case, int values hold 4 bytes of memory.\n";
-
-    
-
+    std::cout << "Here's the pointer: " << aPointer << " and here's the refrence: " << bRefrence << "\nYou can see that in this case, int values hold 4 bytes of memory.\nWe can confirm this by using sizeof(variable)\n";
+    std::cout << "The size of an integer variable is " << sizeof(aNumber) << std::endl;
 }
