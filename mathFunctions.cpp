@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "calculatorC.h"
+#include "operatorClass.h"
 
 int numTest(int num1, int num2){
     int total = num1 + num2;
@@ -105,6 +106,21 @@ void calculatorFunction(float calculationResult){
             // Here, I used recursion to bounce back up and redo the program since it failed.
             calculatorFunction(num1);
     }
-    calcO.printResult();
 
+    calcO.printResult();
+}
+
+void operatorOverloadingTutorial(){
+    int opObjnum1;
+    int opObjnum2;
+    std::cout << "We willl add numbers together through objects.\nInput the first number:";
+    std::cin >> opObjnum1;
+    std::cout << "Input the second number:";
+    std::cin >> opObjnum2;
+    operatorClass operatorObject(opObjnum1);
+    operatorClass operatorObject2(opObjnum2);
+    operatorClass operatorObject3;
+
+    operatorObject3=operatorObject+operatorObject2;
+    std::cout << "\nThe answer is: " << operatorObject3.numberToAdd;
 }
