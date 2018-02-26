@@ -172,7 +172,7 @@ void countUpLoop()
         if (increment == 2)
         {
             std::cout << "even numbers is: ";
-            for (float initialNumber=initialNumberInputted; initialNumber < targetNumber; initialNumber++)
+            for (float initialNumber = initialNumberInputted; initialNumber < targetNumber; initialNumber++)
             {
                 bool evenNumber = isEven(initialNumber);
                 if (evenNumber == true)
@@ -191,7 +191,7 @@ void countUpLoop()
         else
         {
             std::cout << "odd numbers is: ";
-            for (float initialNumber=initialNumberInputted; initialNumber < targetNumber; initialNumber++)
+            for (float initialNumber = initialNumberInputted; initialNumber < targetNumber; initialNumber++)
             {
                 bool evenNumber = isEven(initialNumber);
                 if (evenNumber == false)
@@ -212,5 +212,5 @@ void countUpLoop()
 
 bool isEven(int numberToTest)
 {
-    return numberToTest%2 == 0;
+    return numberToTest % 2 == 0;
 }
