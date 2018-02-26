@@ -5,7 +5,7 @@
 #include "calculatorC.h"
 #include "operatorClass.h"
 
-bool isEven(float numberToTest);
+bool isEven(int numberToTest);
 
 int numTest(int num1, int num2)
 {
@@ -144,7 +144,7 @@ void operatorOverloadingTutorial()
 void countUpLoop()
 {
     std::cout << "This program will show either all the even numbers or odd numbers between 2 numbers. Type letters any time to quit. \n";
-    float initialNumberInputted;
+    int initialNumberInputted;
     int increment;
     int targetNumber;
     std::cout << "Enter which number do you want to count from: \n";
@@ -210,7 +210,7 @@ void countUpLoop()
     }
 }
 
-bool isEven(float numberToTest)
+bool isEven(int numberToTest)
 {
-    return std::floor(numberToTest / 2) == numberToTest;
+    return numberToTest%2 == 0;
 }
