@@ -3,7 +3,7 @@ CFLAGS=-c -Wall
 
 all: start
 
-start: clean main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o
+start: main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o
 		$(CC) main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o -o programExec
 
 main.o: main.cpp

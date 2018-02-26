@@ -27,32 +27,27 @@ void countUpLoop();
 void arrayTut();
 void tutorialChoice();
 
-int main(){
+int main()
+{
 
     std::cout << "Hello world! \n";
     std::cout << "Welcome to my concept review gallery!.\n\n";
-    
+
     std::cout << "Would you like to learn about the c++ language? (Y/N)\n";
     std::string confirmation;
     std::cin >> confirmation;
-    for (std::string::iterator i = confirmation.begin(); i < confirmation.end(); i++){
+    for (std::string::iterator i = confirmation.begin(); i < confirmation.end(); i++)
+    {
         *i = tolower(*i);
     }
-    if(confirmation=="y" || confirmation=="yes"){
+    if (confirmation == "y" || confirmation == "yes")
+    {
         std::cout << "Excellent! Let's carry on. \n\n";
         tutorialChoice();
-    }else{
+    }
+    else
+    {
         exit(0);
     }
     return 0;
 }
-
-
-    
-
-
-
-
-
-
-
