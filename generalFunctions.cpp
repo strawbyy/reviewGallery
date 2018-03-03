@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+#include "compositionC.h"
 
 int numTest(int num1, int num2);
 int numTest();
@@ -12,12 +13,15 @@ void arrayTut();
 void pointersTut();
 int main();
 int operatorOverloadingTutorial();
+void composedSentenceTutActual();
 
 void tutorialChoice()
 {
     int tutorialNum;
     std::cout << "Choose one of the following options or enter -1 to exit.\n";
-    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n6:Pointers and refrences:\n7:Operator Overloading\n";
+    std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n6:Pointers and refrences:\n7:Operator Overloading\n"
+                 "8:Composition\n";
+    std::cout << "Your option: ";
     std::cin >> tutorialNum;
     std::cout << "\n";
     do
@@ -55,6 +59,10 @@ void tutorialChoice()
             tutorialChoice();
         case 7:
             operatorOverloadingTutorial();
+            std::cout << "\n\n";
+            tutorialChoice();
+        case 8:
+            composedSentenceTutActual();
             std::cout << "\n\n";
             tutorialChoice();
         default:
@@ -165,4 +173,14 @@ void pointersTut()
 
     std::cout << "Here's the pointer: " << aPointer << " and here's the refrence: " << bRefrence << "\nYou can see that in this case, int values hold 4 bytes of memory.\nWe can confirm this by using sizeof(variable)\n";
     std::cout << "The size of an integer variable is " << sizeof(aNumber) << std::endl;
+}
+
+// this is just an extra unnecessary step taken to review the friend lesson.
+void composedSentenceTut(compositionC &cco){
+    cco.printInformation();
+}
+
+void composedSentenceTutActual(){
+    compositionC composedObj;
+    composedSentenceTut(composedObj);
 }

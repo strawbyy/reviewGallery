@@ -1,7 +1,6 @@
 #include "calculatorC.h"
 #include <iostream>
 #include <stdlib.h>
-#include <string>
 void calculatorFunction();
 void calculatorFunction(float calculationResult);
 
