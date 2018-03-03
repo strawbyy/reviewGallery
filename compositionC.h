@@ -6,7 +6,7 @@ class compositionC{
         compositionC();
         void printInformation();
     private:
-        char firstPart[256];
+        std::string firstPart;
 
     friend void composedSentenceTut(compositionC &cco);
 };   
