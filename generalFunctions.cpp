@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "compositionC.h"
+#include "composition2C.h"
 
 int numTest(int num1, int num2);
 int numTest();
@@ -176,11 +177,9 @@ void pointersTut()
 }
 
 // this is just an extra unnecessary step taken to review the friend lesson.
-void composedSentenceTut(compositionC &cco){
-    cco.printInformation();
-}
 
-void composedSentenceTutActual(){
-    compositionC composedObj;
-    composedSentenceTut(composedObj);
+void composedSentenceTutActual()
+{
+    composition2C composed2Obj;
+    composed2Obj.printSentence();
 }

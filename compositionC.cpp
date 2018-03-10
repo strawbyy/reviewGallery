@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include "composition2C.h"
 #include "compositionC.h"
 
 compositionC::compositionC(){
@@ -8,10 +9,5 @@ compositionC::compositionC(){
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline (std::cin, firstPart);
     std::cout << std::endl;
-
 }
 
-
-void compositionC::printInformation(){
-    std::cout << firstPart;
-}

@@ -1,12 +1,13 @@
 #ifndef COMPOSITIONC_H
 #define COMPOSITIONC_H
+#include "composition2C.h"
 
 class compositionC{
     public:
         compositionC();
         void printInformation();
-    private:
         std::string firstPart;
+        
 
     friend void composedSentenceTut(compositionC &cco);
 };   
