@@ -27,7 +27,6 @@ compositionC.o: compositionC.cpp
 composition2C.o: composition2C.cpp
 		$(CC) $(CFLAGS) composition2C.cpp
 
-
 clean:
 	rm *.o
 	rm programExec
