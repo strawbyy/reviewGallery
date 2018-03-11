@@ -3,11 +3,11 @@
 
 class operatorClass
 {
-  public:
-    operatorClass();
-    operatorClass(int);
-    operatorClass operator+(operatorClass);
-    int numberToAdd;
+public:
+  operatorClass();
+  operatorClass(int);
+  operatorClass operator+(operatorClass);
+  int numberToAdd;
 };
 
 #endif // operatorClass_h
