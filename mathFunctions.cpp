@@ -34,7 +34,7 @@ void calculatorFunction()
     calculatorC calcO;
     float num1;
     float num2;
-    std::cout << "Input letters at any time to quit. \n\n";
+    std::cout << "Input any letter at any time to quit. \n\n";
     int mathOperation;
     std::cout << "Enter your first number. \n";
     std::cin >> num1;

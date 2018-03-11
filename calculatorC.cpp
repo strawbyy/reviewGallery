@@ -1,5 +1,6 @@
 #include "calculatorC.h"
 #include <iostream>
+#include "tutorialHeader.h"
 #include <stdlib.h>
 void calculatorFunction();
 void calculatorFunction(float calculationResult);
@@ -12,31 +13,31 @@ calculatorC::calculatorC()
 int calculatorC::addNumbers(float firstNum, float secondNum)
 {
     result = firstNum + secondNum;
-    return result;
+    return this->result;
 };
 int calculatorC::subtractNumbers(float firstNum, float secondNum)
 {
     result = firstNum - secondNum;
-    return result;
+    return this->result;
 };
 int calculatorC::multiplyNumbers(float firstNum, float secondNum)
 {
     result = firstNum * secondNum;
-    return result;
+    return this->result;
 };
 int calculatorC::divideNumbers(float firstNum, float secondNum)
 {
     result = firstNum / secondNum;
-    return result;
+    return this->result;
 };
 int calculatorC::findRemainder(int firstNum, int secondNum)
 {
     result = firstNum % secondNum;
-    return result;
+    return this->result;
 };
 void calculatorC::printResult()
 {
-    std::cout << result << "\n";
+    std::cout << this->result << "\n";
 }
 void calculatorC::nextCalculation()
 {
@@ -52,7 +53,8 @@ void calculatorC::nextCalculation()
         calculatorFunction(result);
         break;
     default:
-        exit(0);
+        std::cout << std::endl;
+        tutorialChoice();
     }
 }
 calculatorC::~calculatorC()
