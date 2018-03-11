@@ -58,14 +58,17 @@ void tutorialChoice()
             pointersTut();
             std::cout << "\n\n";
             tutorialChoice();
+            break;
         case 7:
             operatorOverloadingTutorial();
             std::cout << "\n\n";
             tutorialChoice();
+            break;
         case 8:
             composedSentenceTutActual();
             std::cout << "\n\n";
             tutorialChoice();
+            break;
         default:
             if (tutorialNum != -1)
             {
