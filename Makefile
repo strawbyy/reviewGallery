@@ -3,8 +3,8 @@ CFLAGS=-c -Wall
 
 all: start
 
-start: main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o compositionC.o composition2C.o
-		$(CC) main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o compositionC.o composition2C.o -o programExec
+start: main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o compositionC.o composition2C.o inheritanceC.o
+		$(CC) main.o mathFunctions.o calculatorC.o generalFunctions.o operatorClass.o compositionC.o composition2C.o inheritanceC.o -o programExec
 
 main.o: main.cpp
 		$(CC) $(CFLAGS) main.cpp
@@ -26,6 +26,9 @@ compositionC.o: compositionC.cpp
 
 composition2C.o: composition2C.cpp
 		$(CC) $(CFLAGS) composition2C.cpp
+
+inheritanceC.o: inheritanceC.cpp
+		$(CC) $(CFLAGS) inheritanceC.cpp
 
 clean:
 	rm *.o

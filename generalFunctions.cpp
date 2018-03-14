@@ -3,6 +3,7 @@
 #include <string>
 #include "compositionC.h"
 #include "composition2C.h"
+#include "inheritanceC.h"
 
 int numTest(int num1, int num2);
 int numTest();
@@ -15,13 +16,14 @@ void pointersTut();
 int main();
 int operatorOverloadingTutorial();
 void composedSentenceTutActual();
+void inheritanceTut();
 
 void tutorialChoice()
 {
     int tutorialNum;
     std::cout << "Choose one of the following options or enter -1 to exit.\n";
     std::cout << "1:Function overloading\n2:Basic Calculator.\n3:A countdown\n4:Even/Odd list.\n5:What are arrays?\n6:Pointers and refrences:\n7:Operator Overloading\n"
-                 "8:Composition\n";
+                 "8:Composition\n9:Inheritance\n";
     std::cout << "Your option: ";
     std::cin >> tutorialNum;
     std::cout << "\n";
@@ -66,6 +68,11 @@ void tutorialChoice()
             break;
         case 8:
             composedSentenceTutActual();
+            std::cout << "\n\n";
+            tutorialChoice();
+            break;
+        case 9:
+            inheritanceTut();
             std::cout << "\n\n";
             tutorialChoice();
             break;
@@ -185,4 +192,9 @@ void composedSentenceTutActual()
 {
     composition2C composed2Obj;
     composed2Obj.printSentence();
+}
+
+void inheritanceTut()
+{
+    inheritanceC inheritanceObj;
 }
