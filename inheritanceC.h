@@ -1,9 +1,9 @@
 #ifndef INHERITANCEC_H
 #define INHERITANCEC_H
 #include <string>
-#include "calculatorC.h"
+#include "composition2C.h"
 
-class inheritanceC: public calculatorC
+class inheritanceC: public composition2C
 {
   public:
     inheritanceC();

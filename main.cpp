@@ -16,16 +16,7 @@
 #include <stdlib.h>
 #include <string>
 #include <cctype>
-
-//Prototype those functions!
-int numTest(int num1, int num2);
-int numTest();
-void nTestFunction();
-int calculatorFunction();
-void countdownLoop();
-void countUpLoop();
-void arrayTut();
-void tutorialChoice();
+#include "tutorialHeader.h"
 
 int main()
 {

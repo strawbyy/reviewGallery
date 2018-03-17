@@ -54,6 +54,7 @@ void calculatorC::nextCalculation()
         break;
     default:
         std::cout << std::endl;
+        lineBreak();
         tutorialChoice();
     }
 }

@@ -3,7 +3,7 @@
 #include <string>
 
 inheritanceC::inheritanceC()
-    : words("^Above should be the calculator constructor.\n\n")
+    : words("Below should be the composition function yet again.\n\n")
 {
     std::cout << words;
 }

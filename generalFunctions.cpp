@@ -17,6 +17,7 @@ int main();
 int operatorOverloadingTutorial();
 void composedSentenceTutActual();
 void inheritanceTut();
+void lineBreak();
 
 void tutorialChoice()
 {
@@ -33,47 +34,47 @@ void tutorialChoice()
         {
         case 1:
             nTestFunction();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 2:
             calculatorFunction();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 3:
             countdownLoop();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 4:
             countUpLoop();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 5:
             arrayTut();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 6:
             pointersTut();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 7:
             operatorOverloadingTutorial();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 8:
             composedSentenceTutActual();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         case 9:
             inheritanceTut();
-            std::cout << "\n\n";
+            lineBreak();
             tutorialChoice();
             break;
         default:
@@ -197,4 +198,9 @@ void composedSentenceTutActual()
 void inheritanceTut()
 {
     inheritanceC inheritanceObj;
+    inheritanceObj.printSentence();
+}
+
+inline void lineBreak(){
+    std::cout << "-------------------------------------------------\n";
 }

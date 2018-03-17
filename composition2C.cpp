@@ -18,5 +18,5 @@ void composition2C::printSentence()
 {   
     compositionC compositionCc; // When doing composition, remember to actually make the object.
     getSecondPart();
-    std::cout << "\nThe full sentence is:\n" << compositionCc.firstPart << " " << secondPart;
+    std::cout << "\nThe full sentence is:\n" << compositionCc.firstPart << " " << secondPart << std::endl;
 }

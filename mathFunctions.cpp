@@ -138,7 +138,7 @@ void operatorOverloadingTutorial()
     operatorClass operatorObject3;
 
     operatorObject3 = operatorObject + operatorObject2;
-    std::cout << "\nThe answer is: " << operatorObject3.numberToAdd;
+    std::cout << "\nThe answer is: " << operatorObject3.numberToAdd << std::endl;
 }
 
 void countUpLoop()
@@ -208,6 +208,7 @@ void countUpLoop()
             }
         }
     }
+    std::cout << std::endl;
 }
 
 bool isEven(int numberToTest)
